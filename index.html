@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="switch-style.css">
+</head>
+<body>
+  <div id="calculator">
+    <div id="mode">
+      <label class="toggle-switch round">
+        <input type="checkbox" onclick="toggleTheme()" class="theme-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <input id="display" readonly>
+    <div id="buttons">
+      <button class="operator-1" onclick="clearDisplay()">C</button>
+      <button class="operator-1" onclick="removeFromDisplay()">&lt;</button>
+      <button class="operator-1" onclick="addToDisplay('%')">%</button>
+      <button class="operator-2" onclick="addToDisplay('/')">/</button>
+
+      <button class="number" onclick="addToDisplay('7')">7</button>
+      <button class="number" onclick="addToDisplay('8')">8</button>
+      <button class="number" onclick="addToDisplay('9')">9</button>
+      <button class="operator-2" onclick="addToDisplay('*')">X</button>
+
+      <button class="number" onclick="addToDisplay('4')">4</button>
+      <button class="number" onclick="addToDisplay('5')">5</button>
+      <button class="number" onclick="addToDisplay('6')">6</button>
+      <button class="operator-2" onclick="addToDisplay('-')">-</button>
+
+      <button class="number" onclick="addToDisplay('1')">1</button>
+      <button class="number" onclick="addToDisplay('2')">2</button>
+      <button class="number" onclick="addToDisplay('3')">3</button>
+      <button class="operator-2" onclick="addToDisplay('+')">+</button>
+
+      <button class="number" onclick="addToDisplay('-')">+/-</button>
+      <button class="number" onclick="addToDisplay('0')">0</button>
+      <button class="number" onclick="addToDisplay('.')">.</button>
+      <button class="operator-2" onclick="calculateResult()">=</button>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>

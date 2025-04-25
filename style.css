@@ -1,0 +1,81 @@
+:root{
+  --calculator: #252728;
+  --display: #1a1c1e;
+  --button1: #533d27;
+  --button2: #857c68;
+  --button3: #f2af62;
+  --text: #ebedee;
+  --mode: #252728;
+  --border: #131516;
+}
+
+.light-mode{
+  --calculator: #ffffdd;
+  --display: #fff0d3;
+  --button1: #f5cf9f;
+  --button2: #ffe4ab;
+  --button3: #f2af62;
+  --text: #4b4129;
+  --mode: #ffffdd;
+  --border: #dfd1b5;
+}
+
+#calculator{
+  background-color: var(--calculator); 
+  border-radius: 15px;
+  max-width: 500px;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 100px;
+  border: 5px solid var(--border);
+}
+
+#display{
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  font-size: 5rem;
+  text-align: right;
+  border: none;
+  background-color: var(--display);
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+
+#buttons{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 25px;
+}
+
+button{
+  width: 100px;
+  height: 100px;
+  border-radius: 25px;
+  border: none;
+  background-color: black;
+  transition: background-color 0.3s ease, filter 0.3s ease;
+  color: var(--text);
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover{
+  filter: brightness(1.6);
+}
+button:active{
+  filter: brightness(2);
+}
+
+.number{
+  background-color: var(--button1);
+}
+.operator-1{
+  background-color: var(--button2);
+}
+.operator-2{
+  background-color: var(--button3);
+}
+
